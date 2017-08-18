@@ -6,19 +6,19 @@ local.conf for devstack
 3. Install Ubuntu 16.06
 4. Run guest editions and set bidirectional paste
 5. Open terminal and type:
-  Ifconfig and get your local host address (192.168.56.XXX)
-	Sudo gedit (or vi) /etc/environment) and paste:
-
-export http_proxy="http://one.proxy.att.com:8888"
-export https_proxy="http://one.proxy.att.com:8888"
-export ftp_proxy="ftp://one.proxy.att.com:8888"
-export no_proxy="localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,$YOUR_ACTUAL_IP"
-export HTTP_PROXY="http://one.proxy.att.com:8888"
-export HTTPS_PROXY="http://one.proxy.att.com:8888"
-export FTP_PROXY="ftp://one.proxy.att.com:8888"
-export NO_PROXY="localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,$YOUR_ACTUAL_IP"
-
-(Replace $your_actual_ip and save file. Then source /etc/environment)
+  5. Ifconfig and get your local host address (192.168.56.XXX)
+  5. Sudo gedit (or vi) /etc/environment) and paste:
+  5.```
+	export http_proxy="http://one.proxy.att.com:8888"
+	export https_proxy="http://one.proxy.att.com:8888"
+	export ftp_proxy="ftp://one.proxy.att.com:8888"
+	export no_proxy="localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,$YOUR_ACTUAL_IP"
+	export HTTP_PROXY="http://one.proxy.att.com:8888"
+	export HTTPS_PROXY="http://one.proxy.att.com:8888"
+	export FTP_PROXY="ftp://one.proxy.att.com:8888"
+	export NO_PROXY="localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,$YOUR_ACTUAL_IP"
+   ```
+   5. (Replace $your_actual_ip and save file. Then source /etc/environment)
 
 6. Add these three lines to /etc/apt/apt.conf:
 
