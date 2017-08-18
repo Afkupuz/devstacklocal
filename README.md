@@ -69,10 +69,20 @@ git checkout stable/newton
     * navigate into the stack folder and clone a repo from gerrit
     * submit your gerrit http password
     * let the clone complete, then clone another repo to ensure your password has been saved
-      * (recommend cloning something useful like cinder, nova, keystone just remember to change the name to take the mos out so that devstack doesnt have to reclone it completely)
+    *(note: recommend cloning something useful like cinder, nova, keystone just remember to change the name to take the mos out so that devstack doesnt have to reclone it completely)
+    *(note2: /opt is a protected folder, sudo is required)
 
 12. Ensure that this local.conf has been added and that you have replaced the XXXX placeholder with your att gerrit id
 
 13. Stack and pray!
+
+
+# Known issues
+
+**Can't find systemd-python packages:** You probably forgot to checkout newton devstack, navigate to the devstack folder and do a git checkout stable/newton
+
+**Git error regarding requirements:** You are probably trying to stack on top of a recently stacked devstack, I recommend using a fresh vm, but doing a sudo rm -rf /opt/stack/requirements will solve this issue
+
+**Git timeout on cloning http://XXXX@gerrit.mtn...:** You havent set your http password for gerrit, refer to the last line of step 8 and step 11 above.
 
 
