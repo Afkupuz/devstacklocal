@@ -51,19 +51,21 @@ git config --global credential.helper "cache --timeout=288000"
 9. Recommend apt-get update/upgrade and reboot at this point also create snapshot/clone
 
 10. Clone devstack
-  ```https://github.com/openstack-dev/devstack.git```
-  *checkout stable/newton branch*
-  ```
-  cd devstack/
-  git checkout stable/newton
-  ```
+```
+https://github.com/openstack-dev/devstack.git
+```
+  * checkout stable/newton branch*
+```
+cd devstack/
+git checkout stable/newton
+```
 
 11. Pre-stacking setup:
   * in the terminal navigate to /opt and create stack folder
   * navigate into the stack folder and clone a repo from gerrit
   * submit your gerrit http password
   * let the clone complete, then clone another repo to ensure your password has been saved
-    * (recommend cloning something useful like cinder, nova, keystone just remember to change the name to take the mos out so that devstack doesnt have to clone it completely)
+    * (recommend cloning something useful like cinder, nova, keystone just remember to change the name to take the mos out so that devstack doesnt have to reclone it completely)
 
 12. Ensure that this local.conf has been added and that you have replaced the XXXX placeholder with your att gerrit id
 
