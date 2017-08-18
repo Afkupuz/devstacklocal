@@ -6,8 +6,8 @@ local.conf for devstack
 3. Install Ubuntu 16.04
 4. Run guest editions and set bidirectional paste
 5. Open terminal and type:
-    * Ifconfig and get your local host address (192.168.56.XXX)
-    * Sudo gedit (or vi) **/etc/environment** and paste:
+  * Ifconfig and get your local host address (192.168.56.XXX)
+  * Sudo gedit (or vi) **/etc/environment** and paste:
 ```
 export http_proxy="http://one.proxy.att.com:8888"
 export https_proxy="http://one.proxy.att.com:8888"
@@ -18,11 +18,11 @@ export HTTPS_PROXY="http://one.proxy.att.com:8888"
 export FTP_PROXY="ftp://one.proxy.att.com:8888"
 export NO_PROXY="localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,$YOUR_ACTUAL_IP"
 ```
-     * Replace **$YOUR_ACTUAL_IP** with the ip address from ifconfig and save file
+  * Replace **$YOUR_ACTUAL_IP** with the ip address from ifconfig and save file
 ```
 source /etc/environment)
 ```
-    * Check setting with **env | grep proxy**
+  * Check setting with **env | grep proxy**
 
 6. Add these three lines to **/etc/apt/apt.conf**:
 ```
@@ -50,7 +50,7 @@ git config --global user.email "your_email"
 git config --global user.name "your_name"
 git config --global credential.helper "cache --timeout=288000"
 ```
-    *(note: credential helper will store your password for 'timeout' time 288000 = 8hours)
+  *(note: credential helper will store your password for 'timeout' time 288000 = 8hours)
 
 9. Recommend apt-get update/upgrade and reboot at this point also create snapshot/clone
 
@@ -58,7 +58,7 @@ git config --global credential.helper "cache --timeout=288000"
 ```
 https://github.com/openstack-dev/devstack.git
 ```
-    * checkout stable/newton branch
+  * checkout stable/newton branch
 ```
 cd devstack/
 git checkout stable/newton
