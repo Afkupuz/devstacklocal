@@ -84,4 +84,8 @@ git checkout stable/newton
 
 **Git timeout on cloning http://XXXX@gerrit.mtn...:** You havent set your http password for gerrit, refer to the last line of step 8 and step 11 above.
 
-
+**Unable to connect to cache daemon: Permission denied:** Something is wrong with your git cache permissions. Reset them with:
+```
+sudo chown -R <user> ~/.git-credential-cache/
+```
+Where <user> is your ubuntu user id (if you dont know, type whoami in the terminal)
