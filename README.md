@@ -55,7 +55,7 @@ git config --global credential.helper "cache --timeout=288000"
 
 10. Clone devstack:
 ```
-https://github.com/openstack-dev/devstack.git
+git clone https://github.com/openstack-dev/devstack.git
 ```
   * checkout stable/newton branch
 ```
